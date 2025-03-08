@@ -1,5 +1,6 @@
 package michael.co.fastgrocery;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -74,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
     private void initializeViews() {
         toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        Intent i = getIntent();
+        toolbar.setTitle(i.getStringExtra("USER_NAME"));
         rvItems = (RecyclerView)findViewById(R.id.rvItems);
         btnAddToCart = (MaterialButton)findViewById(R.id.btnAddToCart);
         initializeOnClickListeners();
@@ -96,10 +99,16 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
         if (id == R.id.mnu_get_cart){
-            //
+            Intent i = new Intent(MainActivity.this, CartActivity.class);
+            Intent getI = getIntent();
+            i.putExtra("USER_NAME", getI.getStringExtra("USER_NAME"));
+            startActivity(i);
         }
         else if (id == R.id.mnu_get_my_profile){
-            //
+            Intent i = new Intent(MainActivity.this, ProfileActivity.class);
+            Intent getI = getIntent();
+            i.putExtra("USER_NAME", getI.getStringExtra("USER_NAME"));
+            startActivity(i);
         }
         else if (id == R.id.mnu_get_exit){
             finish();

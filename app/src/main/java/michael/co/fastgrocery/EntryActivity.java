@@ -25,8 +25,6 @@ public class EntryActivity extends AppCompatActivity {
     private EditText etGetName;
     private MaterialSwitch msIAmNotARobotConfirmation;
     private MaterialButton btnLetsShopEntry;
-    // live data:
-    private ViewModelName viewModelName;
     // constructor:
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,17 +38,6 @@ public class EntryActivity extends AppCompatActivity {
         });
         // methods calling:
         initializeViews();
-        setupViewModel();
-    }
-
-    private void setupViewModel() {
-        viewModelName = new ViewModelProvider(this).get(ViewModelName.class);
-        viewModelName.getMutableLiveData().observe(EntryActivity.this, nameStore -> {
-            if (nameStore != null)
-                etGetName.setText(String.valueOf(nameStore));
-            else
-                etGetName.setText(String.valueOf(null));
-        });
     }
 
     private void initializeViews() { // method which binds xml and views
@@ -73,27 +60,9 @@ public class EntryActivity extends AppCompatActivity {
                 }
                 else{
                     Intent intent = new Intent(EntryActivity.this, MainActivity.class);
-                    viewModelName.getMutableLiveData().observe(EntryActivity.this, name -> {
-                        intent.putExtra("USER_NAME", String.valueOf(name));
-                    });
+                    intent.putExtra("USER_NAME", etGetName.getText().toString());
                     startActivity(intent);
                 }
-            }
-        });
-        etGetName.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                viewModelName.setName(charSequence.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
             }
         });
     }
