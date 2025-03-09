@@ -68,8 +68,28 @@ public class MainActivity extends AppCompatActivity {
 
     private void getAllItems() {
         items = new Items();
-        items.add(new Item("Banana", 13.4));
-        items.add(new Item("Orange", 5.6));
+        items.add(new Item("Banana", 13.4, R.drawable.banana));
+        items.add(new Item("Orange", 5.6, R.drawable.orange));
+        items.add(new Item("Lemon", 9.6, R.drawable.lemon));
+        items.add(new Item("Milk", 14.1, R.drawable.milk));
+        items.add(new Item("Scandinavian Cheese", 20.4, R.drawable.scandinavian_cheese));
+        items.add(new Item("Sausage", 45.3, R.drawable.sausage));
+        items.add(new Item("Eggs", 2.5, R.drawable.eggs));
+        items.add(new Item("Bread", 11.4, R.drawable.bread));
+        items.add(new Item("Chicken Breast", 13.2, R.drawable.chicken_breast));
+        items.add(new Item("Peanut Butter", 26.7, R.drawable.peanut_bread));
+        items.add(new Item("Orange Juice", 21, R.drawable.orange_juice));
+        items.add(new Item("Frozen Vegetables", 10.3, R.drawable.frozen_vegetables));
+        items.add(new Item("Ground Beef", 57.99, R.drawable.ground_beef));
+        items.add(new Item("Rice", 14.7, R.drawable.rice));
+        items.add(new Item("Pasta", 9.99, R.drawable.pasta));
+        items.add(new Item("Tomato Sauce", 27.88, R.drawable.tomato_sauce));
+        items.add(new Item("Cheddar Cheese", 30.96, R.drawable.cheddar_cheese));
+        items.add(new Item("Cereal", 3.4, R.drawable.cereal));
+        items.add(new Item("Dish Soap", 10.3, R.drawable.dish_soap));
+        items.add(new Item("Coffee", 15.33, R.drawable.coffee));
+        items.add(new Item("Butter", 12.90, R.drawable.butter));
+        items.add(new Item("Yogurt", 8.5, R.drawable.yogurt));
     }
 
     private void initializeViews() {
@@ -108,6 +128,10 @@ public class MainActivity extends AppCompatActivity {
             Intent i = new Intent(MainActivity.this, ProfileActivity.class);
             Intent getI = getIntent();
             i.putExtra("USER_NAME", getI.getStringExtra("USER_NAME"));
+            startActivity(i);
+        }
+        else if (id == R.id.mnu_get_related){
+            Intent i = new Intent(MainActivity.this, RelatedActivity.class);
             startActivity(i);
         }
         else if (id == R.id.mnu_get_exit){

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardBackgroundColor="#63EB9696"
+    app:cardBackgroundColor="#78BFA373"
     app:cardElevation="5sp"
     app:cardCornerRadius="10dp">
 
@@ -17,7 +17,7 @@
             android:layout_width="200sp"
             android:layout_height="wrap_content"
             android:text="TextView"
-            android:textColor="#303F9F"
+            android:textColor="#D13535"
             android:textStyle="bold|normal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -28,13 +28,13 @@
             tools:ignore="MissingConstraints" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tvPrice"
+            android:id="@+id/tvWebsiteURL"
             android:layout_width="100sp"
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textSize="15sp"
             android:textStyle="italic|normal"
-            android:textColor="#44D706"
+            android:textColor="#7B1FA2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"

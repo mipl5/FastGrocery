@@ -9,6 +9,9 @@
         android:id="@+id/mnu_get_my_profile"
         android:title="Profile" />
     <item
+        android:id="@+id/mnu_get_related"
+        android:title="Related" />
+    <item
         android:id="@+id/mnu_get_exit"
         android:title="Exit" />
 </menu>

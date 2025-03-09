@@ -41,7 +41,7 @@
         android:id="@+id/rvItems"
         android:layout_width="300dp"
         android:layout_height="500dp"
-        android:backgroundTint="#84DCC69E"
+        android:backgroundTint="#A1D5AD5A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

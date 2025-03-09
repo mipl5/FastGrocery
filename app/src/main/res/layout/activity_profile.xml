@@ -20,8 +20,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.338"
         tools:ignore="MissingConstraints"
-        tools:src="@tools:sample/avatars"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/default_avatar" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvUserNameTitle"
@@ -51,5 +50,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.658"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/ivBtnGoBack"
+        android:layout_width="200sp"
+        android:layout_height="60sp"
+        android:contentDescription="TODO"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.819"
+        app:srcCompat="@drawable/go_back_button_iv_picture_button"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

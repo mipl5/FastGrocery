@@ -6,9 +6,10 @@ public class Item extends BaseEntity {
     private double price;
     private int imageResource;
     // constructors:
-    public Item(String name, double price){
+    public Item(String name, double price, int imageResource){
         setName(name);
         setPrice(price);
+        setImageResource(imageResource);
     }
     // getters:
     public String getName(){

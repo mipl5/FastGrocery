@@ -63,7 +63,7 @@
         android:layout_width="200sp"
         android:layout_height="wrap_content"
         android:autofillHints=""
-        android:backgroundTint="#6D527183"
+        android:backgroundTint="#6D6BB2DB"
         android:ems="10"
         android:hint="What's your name?"
         android:gravity="center"

@@ -76,6 +76,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemViewHold
                          OnItemLongClickListener longListener){
             tvName.setText(item.getName());
             tvPrice.setText("$" + item.getPrice());
+            ivPicture.setImageResource(item.getImageResource());
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
