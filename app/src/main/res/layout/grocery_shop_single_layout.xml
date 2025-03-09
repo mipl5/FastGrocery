@@ -10,7 +10,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="70sp">
+        android:layout_height="80sp">
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvName"
@@ -21,7 +21,7 @@
             android:textStyle="bold|normal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.734"
+            app:layout_constraintHorizontal_bias="0.587"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.313"
@@ -29,18 +29,18 @@
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tvWebsiteURL"
-            android:layout_width="100sp"
+            android:layout_width="200sp"
             android:layout_height="wrap_content"
             android:text="TextView"
+            android:textColor="#7B1FA2"
             android:textSize="15sp"
             android:textStyle="italic|normal"
-            android:textColor="#7B1FA2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.587"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.686"
+            app:layout_constraintVertical_bias="0.733"
             tools:ignore="MissingConstraints" />
 
         <ImageView

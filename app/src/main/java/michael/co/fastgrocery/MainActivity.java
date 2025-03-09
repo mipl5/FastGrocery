@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         }
         else if (id == R.id.mnu_get_related){
-            Intent i = new Intent(MainActivity.this, RelatedActivity.class);
+            Intent i = new Intent(MainActivity.this, RelatedShopsActivity.class);
             startActivity(i);
         }
         else if (id == R.id.mnu_get_exit){

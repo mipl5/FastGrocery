@@ -4,7 +4,8 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,12 +17,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import michael.co.model.GroceryShop;
 import michael.co.model.GroceryShops;
-import michael.co.model.Item;
 
-public class RelatedActivity extends AppCompatActivity {
+public class RelatedShopsActivity extends AppCompatActivity {
     private RecyclerView rvGroceryShops;
     private GroceryShops groceryShops;
     private GroceryShopsAdapter groceryShopsAdapter;
+    private ImageButton ivBtnGoBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +39,19 @@ public class RelatedActivity extends AppCompatActivity {
     }
 
     private void initializeViews() {
+        rvGroceryShops = (RecyclerView) findViewById(R.id.rvShops);
+        ivBtnGoBack = (ImageButton)findViewById(R.id.ivBtnGoBack);
+        initializeOnClickListeners();
+    }
 
+    private void initializeOnClickListeners() {
+        ivBtnGoBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(RelatedShopsActivity.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     private void getAllGroceryShops() {
@@ -55,7 +68,7 @@ public class RelatedActivity extends AppCompatActivity {
                 openGoogleMapsSearch(data);
             }
         };
-        groceryShopsAdapter = new GroceryShopsAdapter(RelatedActivity.this, groceryShops, R.layout.grocery_shop_single_layout, listener);
+        groceryShopsAdapter = new GroceryShopsAdapter(RelatedShopsActivity.this, groceryShops, R.layout.grocery_shop_single_layout, listener);
         rvGroceryShops.setAdapter(groceryShopsAdapter);
         rvGroceryShops.setLayoutManager(new LinearLayoutManager(this));
     }
