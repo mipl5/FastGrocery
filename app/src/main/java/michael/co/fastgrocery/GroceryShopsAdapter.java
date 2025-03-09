@@ -14,8 +14,6 @@ import com.google.android.material.textview.MaterialTextView;
 
 import michael.co.model.GroceryShop;
 import michael.co.model.GroceryShops;
-import michael.co.model.Item;
-import michael.co.model.Items;
 
 public class GroceryShopsAdapter extends RecyclerView.Adapter<GroceryShopsAdapter.GroceryShopViewHolder>{
 
@@ -67,7 +65,7 @@ public class GroceryShopsAdapter extends RecyclerView.Adapter<GroceryShopsAdapte
             ivPicture = itemView.findViewById(R.id.ivPicture);
         }
         @SuppressLint("SetTextI18n")
-        public void bind(GroceryShop groceryShop, ItemsAdapter.OnItemClickListener listener){
+        public void bind(GroceryShop groceryShop, OnItemClickListener listener){
             tvName.setText(String.valueOf(groceryShop.getName()));
             tvWebsiteURL.setText(String.valueOf(groceryShop.getWebsiteURL()));
             ivPicture.setImageResource(groceryShop.getImageResource());
